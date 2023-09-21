@@ -2,20 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --footer-height: 48px;
-  --navbar-height: 48px;
-}
-
 body {
   color: black;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-}
-
-.footer {
-  height: var(--footer-height);
-}
-
-.navbar {
-  height: var(--navbar-height);
 }

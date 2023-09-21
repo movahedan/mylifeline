@@ -6,8 +6,7 @@ import {
   websiteBaseUrl,
   websiteDescription,
 } from "@mylifeline/contents/website";
-import { Footer, Navbar } from "@mylifeline/ui/molecules";
-import { classNames } from "@mylifeline/utilities";
+import { Footer } from "@mylifeline/ui/molecules";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
@@ -20,15 +19,14 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <body
-        className={classNames([
-          "bg-white flex flex-col h-full",
+        className={[
+          "bg-red bg-gradient-to-r from-indigo-500 via-purple-700 to-pink-700",
           outfitFont.className,
-        ])}
+        ].join(" ")}
       >
-        <Navbar />
-        <div className="flex flex-col flex-1">{children}</div>
+        {children}
         <Footer />
       </body>
     </html>

@@ -3,10 +3,10 @@
 exports[`<Footer> should match is's snapshot: default 1`] = `
 <div>
   <footer
-    class="footer w-full flex justify-center"
+    class=""
   >
     <p
-      class="prose flex items-center prose-badge"
+      class="prose flex items-center mt-24 prose-badge"
     >
       Created as a demo project © 2023.
     </p>
