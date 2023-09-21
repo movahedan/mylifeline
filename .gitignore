@@ -1,0 +1,11 @@
+.DS_Store
+/node_modules
+/.next/
+/out/
+/.history
+/.vercel
+/.env
+/.env*.local
+/next-env.d.ts
+/yarn-debug.log*
+/yarn-error.log*

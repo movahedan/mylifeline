@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text> should match is's snapshot: default 1`] = `
+<div>
+  <p
+    class="prose flex items-center"
+  >
+    Hello
+  </p>
+</div>
+`;
+
+exports[`<Text> should match is's snapshot: inline 1`] = `
+<div>
+  <p
+    class="prose inline-flex items-center"
+  >
+    Hello
+  </p>
+</div>
+`;

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button> should match is's snapshot: default 1`] = `
+<div>
+  <button
+    class="inline-flex prose prose-button py-16 px-40 border rounded-lg outline-0 transition-all duration-300"
+  >
+    Hello
+  </button>
+</div>
+`;
+
+exports[`<Button> should match is's snapshot: icon default 1`] = `
+<div>
+  <button
+    class="inline-flex prose prose-button py-16 px-40 border rounded-lg outline-0 transition-all duration-300"
+  >
+    <span
+      class="mr-20"
+    >
+      i
+    </span>
+    Hello
+  </button>
+</div>
+`;

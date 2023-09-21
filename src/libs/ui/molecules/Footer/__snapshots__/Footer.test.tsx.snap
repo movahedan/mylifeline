@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer> should match is's snapshot: default 1`] = `
+<div>
+  <footer
+    class=""
+  >
+    <p
+      class="prose flex items-center mt-24 prose-badge"
+    >
+      Created as a demo project © 2023.
+    </p>
+  </footer>
+</div>
+`;
