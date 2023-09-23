@@ -11,8 +11,11 @@ export type FooterProps = {
 };
 
 export const Footer = ({ style, className, children }: FooterProps) => (
-  <footer style={style} className={classNames([className])}>
-    <Text as="p" className="mt-24 prose-badge">
+  <footer
+    style={style}
+    className={classNames(["footer", "w-full flex justify-center", className])}
+  >
+    <Text as="p" className="prose-badge">
       {footerContent.copyRight}
     </Text>
 

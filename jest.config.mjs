@@ -26,8 +26,9 @@ const config = {
     "./src/**/*.ts",
 
     "!./src/**/index.ts",
-    "!./src/libs/constants/**/*.ts",
     "!./src/app/layout.tsx",
+    "!./src/**/global-error.tsx",
+    "!./src/libs/constants/**/*.ts",
   ],
 };
 
