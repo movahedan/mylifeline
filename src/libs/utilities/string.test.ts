@@ -16,5 +16,11 @@ describe("string utility", () => {
 
     classNamesString = classNames(undefined);
     expect(classNamesString).toBe(undefined);
+
+    classNamesString = classNames(false);
+    expect(classNamesString).toBe(undefined);
+
+    classNamesString = classNames(true);
+    expect(classNamesString).toBe(undefined);
   });
 });
