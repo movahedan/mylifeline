@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CalendarWeek passed week should be green: passed week 1`] = `
+<div>
+  <li
+    class="w-8 h-8 mx-1 my-1 bg-green-500"
+    data-testid="week"
+  />
+</div>
+`;
+
+exports[`CalendarWeek should be rendered correctly: default 1`] = `
+<div>
+  <li
+    class="w-8 h-8 mx-1 my-1 bg-slate-400"
+    data-testid="week"
+  />
+</div>
+`;
+
+exports[`CalendarWeek week which has event should be purple, doesn't matter it is passed or not: has event week 1`] = `
+<div>
+  <li
+    class="w-8 h-8 mx-1 my-1 bg-purple-500"
+    data-testid="week"
+  />
+</div>
+`;
+
+exports[`CalendarWeek week which has event should be purple, doesn't matter it is passed or not: passed week which has event 1`] = `
+<div>
+  <li
+    class="w-8 h-8 mx-1 my-1 bg-purple-500"
+    data-testid="week"
+  />
+</div>
+`;
