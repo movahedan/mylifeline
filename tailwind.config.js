@@ -24,6 +24,7 @@ module.exports = {
     fontFamily: {
       sans: ["Outfit", "Inter", "Helvetica", "Arial", "sans-serif"],
     },
+
     fontSize: {
       xs: ".75rem",
       sm: ".875rem",
@@ -39,6 +40,8 @@ module.exports = {
 
     spacing: {
       0: toRem(0),
+      1: toRem(1),
+      2: toRem(2),
       8: toRem(8),
       12: toRem(12),
       16: toRem(16),
@@ -53,6 +56,7 @@ module.exports = {
       78: toRem(78),
       82: toRem(82),
       100: toRem(100),
+      128: toRem(128),
       200: toRem(200),
       208: toRem(208),
       419: toRem(419),
