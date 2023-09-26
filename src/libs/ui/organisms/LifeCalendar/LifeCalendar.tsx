@@ -1,3 +1,5 @@
+"use client";
+
 import { CalendarWeek } from "@mylifeline/ui/molecules";
 import {
   WEEKS_IN_MILLISECONDS,
@@ -34,7 +36,10 @@ export const LifeCalendar = ({
   return (
     <ul
       style={style}
-      className={classNames(["flex flex-wrap w-full", className])}
+      className={classNames([
+        "flex flex-wrap w-full justify-center md:justify-start",
+        className,
+      ])}
     >
       {totalWeeksArray.map((_, index) => {
         const isPassed = index + 1 < currentWeek;

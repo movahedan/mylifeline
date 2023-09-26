@@ -1,14 +1,48 @@
-import { render } from "@testing-library/react";
+import { act, render } from "@testing-library/react";
 
-import { homepageContent } from "@mylifeline/contents/home-page";
+import { defaultUser, getUser } from "@mylifeline/data/user";
 
 import Home from "./page";
 
-describe("Home component", () => {
-  it("renders main title", () => {
-    const { getByText } = render(<Home />);
-    const title = getByText(homepageContent.title);
+const consoleError = jest.spyOn(console, "error").mockImplementation(() => {});
+jest.mock("@mylifeline/data/user", () => ({
+  ...jest.requireActual("@mylifeline/data/user"),
+  getUser: jest.fn().mockImplementation(() => Promise.resolve(defaultUser)),
+}));
 
-    expect(title).toBeInTheDocument();
+describe("Home component", () => {
+  it("renders user and calendar", async () => {
+    let component: HTMLElement | undefined = undefined;
+
+    await act(async () => {
+      const { container } = render(<Home />);
+      component = container;
+    });
+
+    expect(component).toMatchSnapshot("default");
+    expect(
+      (component as unknown as HTMLElement).querySelector(
+        "[data-testid=username]"
+      )
+    ).toHaveTextContent("firstName lastName");
+  });
+
+  it("renders default user and default calendar when getUser throws an error", async () => {
+    (getUser as jest.Mock).mockImplementationOnce(() => Promise.reject(null));
+
+    let component: HTMLElement | undefined = undefined;
+
+    await act(async () => {
+      const { container } = render(<Home />);
+      component = container;
+    });
+
+    expect(consoleError).toHaveBeenCalledTimes(1);
+    expect(component).toMatchSnapshot("error");
+    expect(
+      (component as unknown as HTMLElement).querySelector(
+        "[data-testid=username]"
+      )
+    ).toHaveTextContent("Loading...");
   });
 });
