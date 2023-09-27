@@ -16,16 +16,20 @@ export const Navbar = ({ className, style }: NavbarProps) => {
       style={style}
       className={classNames([
         "navbar",
-        "flex justify-center items-center w-full",
+        "max-w-764 flex justify-center items-center w-full py-32 px-24 mx-auto",
         className,
       ])}
     >
-      <ul className="flex space-x-32">
+      <ul className="flex w-full space-x-32">
         <li>
-          <Link href={routes.index}>Home</Link>
+          <Link href={routes.index} className="inline-block p-12">
+            Home
+          </Link>
         </li>
         <li>
-          <Link href={routes.goals}>Goals</Link>
+          <Link href={routes.goals} className="inline-block p-12">
+            Goals
+          </Link>
         </li>
       </ul>
     </nav>

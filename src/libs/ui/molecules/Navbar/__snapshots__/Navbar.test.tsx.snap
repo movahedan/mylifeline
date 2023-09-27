@@ -3,13 +3,14 @@
 exports[`Navbar snapshot test 1`] = `
 <div>
   <nav
-    class="navbar flex justify-center items-center w-full"
+    class="navbar max-w-764 flex justify-center items-center w-full py-32 px-24 mx-auto"
   >
     <ul
-      class="flex space-x-32"
+      class="flex w-full space-x-32"
     >
       <li>
         <a
+          class="inline-block p-12"
           href="/"
         >
           Home
@@ -17,6 +18,7 @@ exports[`Navbar snapshot test 1`] = `
       </li>
       <li>
         <a
+          class="inline-block p-12"
           href="/goals"
         >
           Goals
