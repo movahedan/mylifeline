@@ -31,19 +31,20 @@ export default function Home() {
   return (
     <div
       className={classNames([
-        "flex flex-col items-start justify-center flex-1 p-16 mx-auto max-w-764 space-y-24",
+        "flex flex-col items-start w-full flex-1 p-16 mx-auto max-w-764 space-y-24",
         "md:flex-row md:p-24 md:space-x-24 md:space-y-0",
       ])}
     >
       <aside
         className={classNames([
-          "flex flex-col items-center mx-auto space-y-8",
+          "flex flex-col items-center mx-auto space-y-8 w-full",
           "md:w-1/4",
         ])}
       >
         <Image
           width={128}
           height={128}
+          loading="lazy"
           src={user?.profilePictureUrl}
           alt={user?.fullName}
           className="w-128 h-128"
@@ -52,11 +53,12 @@ export default function Home() {
           {user.fullName}
         </Text>
       </aside>
+
       <LifeCalendar
         years={user.lifeExpectancy}
         birthday={user.birthday}
         lifeEvents={user.lifeEvents}
-        className="mx-auto"
+        className={classNames(["w-full mx-auto", "md:w-3/4"])}
       />
     </div>
   );
