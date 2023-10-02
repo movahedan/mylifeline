@@ -20,13 +20,8 @@ type RootLayoutProps = {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="h-full">
-      <body
-        className={classNames([
-          "bg-white flex flex-col h-full",
-          outfitFont.className,
-        ])}
-      >
+    <html lang="en">
+      <body className={classNames(["flex flex-col", outfitFont.className])}>
         <header>
           <Navbar />
         </header>
