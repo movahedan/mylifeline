@@ -79,7 +79,7 @@
         "import/resolver": {
           "typescript": {
             "alwaysTryTypes": true,
-            "project": ["apps/*/tsconfig.json", "libs/*/tsconfig.json"]
+            "project": ["./tsconfig.json"]
           }
         }
       }
@@ -103,7 +103,7 @@
       "files": [
         "./src/pages/**/*.{js,jsx,ts,tsx}",
         "./src/app/**/*.{js,jsx,ts,tsx}",
-        "*.stories.tsx"
+        "./commitlint.config.ts"
       ],
       "rules": {
         "import/no-default-export": "off"
