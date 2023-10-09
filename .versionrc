@@ -1,6 +1,6 @@
 {
     "path": ".",
-    "tag-prefix": "root-v",
+    "tag-prefix": "",
     "releaseCommitMessageFormat": "chore(release): @mytimeline@{{currentTag}}",
     "parserOpts": {
         "headerCorrespondence": [

@@ -71,12 +71,10 @@ const config: UserConfig = {
     "type-empty": [2, "never"],
     "type-enum": [2, "always", Object.keys(types.enum || {})],
 
-    "header-full-stop": [2, "always", "."],
     "header-max-length": [2, "always", 100],
 
     "subject-case": [2, "always", "sentence-case"],
     "subject-empty": [2, "never"],
-    "subject-full-stop": [2, "always", "."],
 
     "body-case": [2, "always", "sentence-case"],
     "body-leading-blank": [1, "always"],
